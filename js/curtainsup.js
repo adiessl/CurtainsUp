@@ -97,7 +97,7 @@ function initializeCurtain(rowCount, columnCount, colorCount) {
  */
 
 function draw() {
-  background(0);
+  clear();
   drawBorders();
   drawCurtain(curtain, colors);
   drawLevel(level);
