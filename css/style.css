@@ -11,6 +11,13 @@ body {
   animation: 3s ease-in-out 0s 1 colorAnimation;
 }
 
+#ribbon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 0;
+}
+
 #main {
   padding: 2em 2em;
 }
