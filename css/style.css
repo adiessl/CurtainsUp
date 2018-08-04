@@ -1,0 +1,132 @@
+body {
+  margin: 0;
+  height: 100vh;
+  color: #FFFFFF;
+  background-color: #000000;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  animation: 3s ease-in-out 0s 1 colorAnimation;
+}
+
+#main {
+  padding: 2em 2em;
+}
+
+h1, h2 {
+  text-align: center;
+  margin: 0;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  align-content: stretch;
+}
+
+#content {
+  padding: 0;
+  margin: 0;
+  z-index: 12345;
+}
+
+#game {
+  text-align: center;
+  flex: 0 0 auto;
+  padding: 2em;
+  animation: 6s ease-in-out 0s 1 opacityAnimation_1;
+}
+
+canvas {
+  display: table;
+}
+
+#buttons {
+  animation: 6s ease-in-out 0s 1 opacityAnimation_2;
+}
+
+.button, button:focus, button:active {
+  flex: 1 0 25%;
+  padding: 0.5em;
+  font-size: 0.8em;
+  color: #000000;
+  background: #9E9E9E;
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+
+.button:hover {
+  background: rgba(255, 255, 0, 0.3);
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+#help {
+  flex: 1 0 200px;
+  padding: 2em;
+}
+
+li {
+  list-style-type: square;
+  padding-top: 0.5em;
+}
+
+#lightContainer {
+  position: absolute;
+  float: left;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+  z-index: -1;
+  animation: 6s ease-in-out 0s 1 opacityAnimation_2;
+}
+
+#light {
+  position: absolute;
+  float: left;
+  opacity: 0.5;
+  z-index: -1;
+  overflow: none;
+  left: -100%;
+}
+
+@keyframes colorAnimation {
+  from {
+    background-color: #FFFAAA;
+    color: #FFFAAA;
+  }
+  to {
+    background-color: #000000;
+    color: #FFFFFF;
+  }
+}
+
+@keyframes opacityAnimation_1 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes opacityAnimation_2 {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

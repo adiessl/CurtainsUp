@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Curtains up!</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.min.js"></script>
+  <script src="./js/curtainsup.js"></script>
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+
+<body>
+  <div id="main">
+    <h1>Curtains up!</h1>
+    <div id="content" class="flex">
+      <div id="game">
+        <div id="canvas"></div>
+        <div id="buttons" class="flex">
+          <button class="button" onclick="hintButtonPressed()">
+            <span class="underline">H</span>int
+          </button>
+          <button class="button" onclick="shuffleButtonPressed()">
+            <span class="underline">S</span>huffle
+          </button>
+          <button class="button" onclick="undoButtonPressed()">
+            <span class="underline">U</span>ndo
+          </button>
+          <button class="button" onclick="restartButtonPressed()">
+            <span class="underline">R</span>estart
+          </button>
+        </div>
+      </div>
+      <div id="help">
+        <h2>The game</h2>
+        <p>You are a stagehand at the local theatre and it is your responsibility to open the curtains before each act.</p>
+        <h2>How to play</h2>
+        <ul>
+          <li>Open the curtains by clicking on at least three connecting curtain elements of the same color in order to remove
+            them.
+          </li>
+          <li>The more curtain elements are removed at once, the more applause you'll get.</li>
+          <li>Advance to the next act by opening the curtains fully.</li>
+          <li>Press 'H' for a hint if you're stuck.</li>
+          <li>Press 'S' to shuffle the remaining blocks.</li>
+          <li>Restart the current act by pressing 'R'.</li>
+          <li>There are dedicated buttons for these actions below the stage as well.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div id="lightContainer">
+    <div id="light">
+      <svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="gradient">
+            <stop offset="0%" stop-color="orange" />
+            <stop offset="70%" stop-color="yellow" />
+            <stop offset="80%" stop-color="gold" />
+            <stop offset="100%" stop-color="black" />
+          </radialGradient>
+        </defs>
+        <circle fill="url(#gradient)" cx="100" cy="100" r="100" />
+      </svg>
+    </div>
+  </div>
+</body>
+
+</html>
