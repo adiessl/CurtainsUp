@@ -41,6 +41,7 @@ var accents = [
   '#101010'//hintaccent
 ];
 
+var canvas;
 var curtain;
 
 var score;
@@ -61,8 +62,9 @@ var undoStack = [];
  */
 
 function setup() {
-  var canvas = createCanvas(canvasWidth, canvasHeight);
+  canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.parent('canvas');
+  canvas.mouseClicked(canvasClicked);
   resizeLightContainer();
   noLoop();
   restart();
@@ -186,7 +188,7 @@ function drawMessage(message, hint) {
  * \\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//
  */
 
-function mouseClicked() {
+function canvasClicked() {
   if (gameWon) {
     level++;
     restart();
